@@ -156,7 +156,7 @@ post.contentSnippet?.toLowerCase().includes(search.toLowerCase()));
 
   return (
     <div className={styles.dashboard}>
-      <h2>Przegląd Postów (WIP)</h2>
+      <h2>Przegląd Postów </h2>
       <label>
       <p> Wyszukuj posty</p> 
       <input 

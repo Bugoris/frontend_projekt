@@ -5,10 +5,13 @@ import PropTypes from 'prop-types';
 import './Login.css';
 import { useAuth } from '../contexts/AuthContext';
 
+import { API_URL } from '../config.js';
+
+
 //To zwykła funkcja JAVASCRIPT, nie można uzywac komponentów react tutaj
 async function loginUser(credentials) {
 
-  const response = await fetch('https://localhost:7026/api/login', {
+  const response = await fetch(`${API_URL}/api/login`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

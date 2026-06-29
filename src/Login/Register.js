@@ -3,10 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Login.css';
 
+import { API_URL } from '../config.js';
+
+
 //To zwykła funkcja JAVASCRIPT, nie można uzywac komponentów react tutaj
 async function RegisterUser(credentials) {
 
-  const response = await fetch('https://localhost:7026/api/login/register', {
+  const response = await fetch(`${API_URL}/api/login/register`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -27,9 +30,9 @@ export default function Register() {
   let navigate = useNavigate();
 
 
-  const [username, setUserName] = useState();
-  const [password, setPassword] = useState();
-  const [repeatpassword, setRepeatpassword] = useState();
+  const [username, setUserName] = useState("");
+const [password, setPassword] = useState("");
+const [repeatpassword, setRepeatpassword] = useState("");
 
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -58,7 +61,7 @@ export default function Register() {
       //setToken(token);
       navigate("/login", { state: { message: "Account created!" } });
     } catch (err) {
-      setError(err.message || 'An error occurred during register');
+      setError(err.message || 'Takie konto już istnieje');
     } finally {
       setLoading(false);
     }
@@ -98,9 +101,15 @@ export default function Register() {
            
         <button 
             type="submit" 
-            className="login-btn"
-            disabled={loading || password !== repeatpassword}
-            onClick={()=> navigate("/login")}>
+            className="register-btn"
+             disabled={
+    loading ||
+    !username ||
+    !password ||
+    !repeatpassword ||
+    password !== repeatpassword
+  }
+            >
             {loading ? 'Rejestrowanie...' : 'Zarejestruj się'}
         </button>
           
@@ -108,7 +117,7 @@ export default function Register() {
 
         </div>
       </form>
-       <button  className="register-btn" onClick={()=> navigate("/login")}>
+       <button  className="login-btn" onClick={()=> navigate("/login")}>
                 Masz już konto? Zaloguj się...
           </button>
           </div>

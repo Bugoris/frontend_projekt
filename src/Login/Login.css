@@ -100,3 +100,14 @@
 .register-btn:hover {
   background: #ddd;
 }
+
+.register-btn:disabled {
+  background: #ddd;
+  color: #888;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.register-btn:disabled:hover {
+  background: #ddd;
+}

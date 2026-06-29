@@ -17,7 +17,7 @@ import '@ckeditor/ckeditor5-build-classic/build/translations/pl';
 
 //To zwykła funkcja JAVASCRIPT, nie można uzywac komponentów react tutaj
 async function getTags() {
-  const response = await fetch('${API_URL}/api/Tags', {
+  const response = await fetch(`${API_URL}/api/Tags`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
