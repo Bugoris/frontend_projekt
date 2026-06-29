@@ -1,0 +1,139 @@
+
+/* odpowiedzialne za sidebar!!! */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.dashboard {
+  /* max-width: 600px; */
+  margin: 20px 270px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 15px; */
+  font-family: Arial, sans-serif;
+}
+
+.postName {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.postTextArea {
+  padding: 10px;
+  font-size: 16px;
+  min-height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.submitBtn {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 2px;
+}
+
+.submitBtn:hover {
+  background-color: #45a049;
+}
+.removeBtn {
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ff0404;
+  padding: 10px;
+}
+
+.removeBtn:hover {
+  background-color: #9a0000;
+
+
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.tag {
+  background-color: #001b93;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.buttonContainer{
+    display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 10px;
+}
+
+.editBtn {
+  padding: 10px;
+  background-color: #4c6daf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 2px;
+}
+
+.editBtn:hover {
+  background-color: #041d72;
+}
+
+.logoutBtn {
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logoutBtn:hover {
+  background-color: #d32f2f;
+}
+
+.dashboard {
+  padding: 20px;
+}
+
+.postItem {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.postItem h3 {
+  margin: 0 0 5px 0;
+}
+
+.postItem p {
+  margin: 0;
+
+
+}
+
+
+.editor {
+  min-height: 400px;
+}
